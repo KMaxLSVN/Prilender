@@ -1,3 +1,2 @@
-# Prilender
-Slider JS
+# Slider JS
 Written with class. Has an option: obverse and reverse.

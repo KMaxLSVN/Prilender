@@ -1,0 +1,70 @@
+#prilender {
+    background-color: black;
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+}
+.left-column,
+.right-column {
+    width: 50%;
+    height: 495px;
+}
+.left-column{
+    padding-bottom: 200px;
+}
+.right-column{
+    padding-top: 200px;
+}
+#slider-left,
+#slider-right {
+    overflow: hidden;
+    height: 100%;
+}
+.slider-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slider-item {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.slider-item.current {
+    top: 0 !important;
+}
+.slider-item.current.top {
+    top: -100% !important;
+}
+.slider-content.revert .slider-item{
+    top: -100%;
+}
+.slider-item.current.bottom {
+    top: 100% !important;
+}
+.slider-item.current,
+.slider-item.top,
+.slider-item.bottom {
+    transition: all 2s ease;
+}
+@keyframes scale {
+    0% {transform: scale(1) rotate(-20deg);}
+    100% {transform: scale(1.3) rotate(-20deg);}
+}
+.circle {
+    background: blue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    transform: rotate(-20deg);
+    margin: 50px;
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
